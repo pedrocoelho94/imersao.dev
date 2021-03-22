@@ -2,6 +2,7 @@ const p = document.querySelector('.resultado')
 
 function reset(){
     document.getElementById('valor').value = ''
+    p.innerHTML = ''
 }
 
 function converter(){
@@ -10,13 +11,12 @@ function converter(){
     let valor = document.getElementById('valor').value
 
     if(moeda === '' || valor === ''){
-        alert('Moeda e/ou valor não selecionados!')
+        p.innerHTML = 'Moeda e/ou valor não selecionados!'
         return false
     }
 
     if(isNaN(valor)){
-        p.innerHTML = 'Digite um valor válido!'
-        
+        p.innerHTML = 'Digite um valor válido!'        
     }else{
         if(moeda === 'dolar'){
             valorConvertido = valor*5.53
@@ -25,15 +25,8 @@ function converter(){
         }else if(moeda === 'libra'){
             valorConvertido = valor*7.67
         }
-
-        valorConvertido = valorConvertido.toFixed(2)
-        console.log(valorConvertido)
-        
+        valorConvertido = valorConvertido.toFixed(2)     
         p.innerHTML = `R$${valorConvertido}`
-
     }
-
-
-
 
 }
