@@ -1,11 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: 'Roboto Mono',monospace;
     min-height: 400px;
-    background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-1-conversor-de-moedas.png');
     background-color: #000000;
     background-size: 100vh;
     background-position: center bottom;
     background-repeat: no-repeat;
+    color: white;
   }
   
   .container {
@@ -33,4 +38,35 @@ body {
     position: absolute;
     top: 10px;
     right:10px;
+  }
+
+  img{
+      margin: 20px;
+  }
+
+  section{
+      margin: 20px;
+  }
+  
+  button{
+      margin: 20px;
+      font-size: 1.2em;
+      padding: 5px;
+  }
+
+  .form{
+      font-size: 1.2em;
+  }
+
+  input{
+      font-size: 18px;
+      height: 20px;
+  }
+
+  #moedas{
+    height: 20px;
+  }
+
+  .resultado{
+      font-size: 2em;
   }
