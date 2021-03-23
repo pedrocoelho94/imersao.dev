@@ -18,7 +18,7 @@ function verificaPersonagem(){
     char = char.toLowerCase()
     console.log(char)
     if(char === pokemonsNome[random]){
-        p.innerHTML = 'Parabéns, você acertou o personagem'
+        p.innerHTML = 'Parabéns, você acertou o personagem!'
     }else{
         p.innerHTML = 'Você errou, tente novamente!'
     }
