@@ -10,13 +10,23 @@
 <body>
     <div class="container">
         <h1 class="page-title">
-            Calculadora
+            Adivinhe o personagem
         </h1>
         <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-calculadora.svg" class="page-logo"
             alt="">
-        <div class="calculadora">
+        <div class="personagemRandom" >
+            <img id="myImg" src="" alt="">
         </div>
+        <label for="">Qual é este personagem?</label><br>
+        <div class="forms">
+            <input type="text" id="campoPersonagem">
+            <button onclick="verificaPersonagem()">Verificar</button>
+            <button onclick="refresh()">Novo Personagem</button>
+        </div>
+        <p class="resultado"></p>
     </div>
+
+
     <a href="https://alura.com.br/" target="_blank">
         <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
     </a>
