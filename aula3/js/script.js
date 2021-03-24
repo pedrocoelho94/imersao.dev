@@ -45,7 +45,7 @@ function verificaNumero(){
     }
         
     if(tentativas == 0){
-        t.innerHTML = `Você perdeu, o número era ${numeroSecreto}`
+        t.innerHTML = `Você perdeu, o número era ${numeroSecreto}.`
         p.innerHTML = ''
         campoNumero.value = "FIM"
         campoNumero.disabled = true
