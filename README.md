@@ -8,7 +8,9 @@ Converta as principais moedas para real.
 * aula 2 - Adivinhe o personagem  
 Adivinhe o personagem que aparece na tela.  
 
-* aula 3 - Em breve
+* aula 3 - Adivinhe o número  
+3 tentativas para acertar o número selecionado de forma aleatória entre 1 e 10.  
+
 * aula 4 - Em breve
 * aula 5 - Em breve
 * aula 6 - Em breve
