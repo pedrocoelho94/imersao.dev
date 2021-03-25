@@ -55,6 +55,11 @@ body {
     height: 268px;
 }
 
-span{
+.singleFilm span{
     color: white;
+    text-transform: capitalize;
+}
+
+.operacao{
+  color: white;
 }
