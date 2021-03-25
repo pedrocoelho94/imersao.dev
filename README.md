@@ -12,7 +12,7 @@ Adivinhe o personagem que aparece na tela.
 3 tentativas para acertar o número selecionado de forma aleatória entre 1 e 10.  
 
 * aula 4 - Galeria de Filmes  
-Uma pequena galeria de filmes, onde é possível adicionar novos títulos.  
+Uma pequena galeria de filmes, onde é possível adicionar novos títulos ou remover os existentes. 
 
 * aula 5 - Em breve
 * aula 6 - Em breve
