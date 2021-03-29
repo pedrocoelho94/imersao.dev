@@ -80,7 +80,6 @@ button{
   height: 0;
   border-radius: 5px;
   color: white;
-  background-color: rgb(0,0,0,30%);
   transition: all 1s ease-in-out;
   overflow: hidden;
   opacity: 0;
@@ -95,7 +94,7 @@ button{
 
 fieldset {
   border: 2px solid white;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .campoCadastro input {
