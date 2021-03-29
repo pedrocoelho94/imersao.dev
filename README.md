@@ -15,7 +15,7 @@ Adivinhe o personagem que aparece na tela.
 Uma pequena galeria de filmes, onde é possível adicionar novos títulos ou remover os existentes. 
 
 * aula 6 - Tabela de Classificação  
-Tabela onde é possível adicionar e remover jogadores, os elementos são ordenados de forma descrescente com base no campo 'pontos'. Também existe a opção de adicionar as vitórias, empates e derrotas de cada participante.
+Tabela onde é possível adicionar e remover jogadores, os elementos são ordenados de forma descrescente com base no campo 'pts'. Também existe a opção de adicionar as vitórias, empates e derrotas de cada participante.
 
 * aula 7 - Em breve
 * aula 8 - Em breve
