@@ -43,6 +43,9 @@ body {
 table {
   border: 2px solid white;
   border-collapse: collapse;
+  width: 99%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -52,6 +55,7 @@ h1 {
 th, tr, td {
   border: solid 1px white;
   color: white;
+  padding: 1px;
 }
 
 #cadastro{
