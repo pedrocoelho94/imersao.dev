@@ -88,11 +88,11 @@ function resetPontos(){
 }
 
 function novoJogador() {
-    document.querySelector('.cadastro').classList.add('ativo')
+    document.querySelector('.campoCadastro').classList.add('ativo')
   }
 
 function fechaCadastro(){
-    document.querySelector('.cadastro').classList.remove('ativo')
+    document.querySelector('.campoCadastro').classList.remove('ativo')
     document.getElementById('nomeNovoJogador').value = ""
 }
 
