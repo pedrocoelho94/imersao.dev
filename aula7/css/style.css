@@ -3,21 +3,23 @@
   margin: 0;
 }
 body {
+  height:100vh;
   font-family: 'Roboto Mono', monospace;
   background-image: url('https://i.imgur.com/nXpfkGp.jpg');
   background-color: #000000;
   background-position: center center;
   background-repeat: no-repeat;
   color: white;
+  
 }
 
 .container {
   text-align: center;
-  margin-top: 15px;
   
 }
 
 .page-logo{
+  margin-top: 15px;
   height: 30px;
 }
 
