@@ -107,8 +107,6 @@ let ptsMaquina = 0
 
 pontos.innerHTML = `Jogador - ${ptsJogador} | ${ptsMaquina} - Máquina `
 
-minhaCarta.style.display = 'none'
-
 function sortearCarta(){
     numeroCartaMaquina = Math.floor(Math.random() * 10)
     numeroCartaJogador = Math.floor(Math.random() * 10)
@@ -177,7 +175,7 @@ function jogar(){
     <div class="bg2"><span>Defesa</span><span>${cartaJogador.atributos.defesa}</span></div>
     <div class="bg1"><span>Magia</span><span>${cartaJogador.atributos.magia}</span></div>
     </div></div>`
-    
+
     versus.innerHTML = `<img class="img-x" src="https://i.imgur.com/zRf2J4T.png" alt="">`
 
     campoMaquina.innerHTML = `
@@ -216,6 +214,7 @@ function jogar(){
 function novoJogo(){
     document.getElementById('btnNovoJogo').disabled = true
     document.getElementById('btnSortear').disabled = false
+    minhaCarta.style.display = "none"
     document.getElementById('escolhaAtributo').style.display="none"
     document.getElementById('btnSortear').style.display="inline-block"
     campoJogador.innerHTML = ''
