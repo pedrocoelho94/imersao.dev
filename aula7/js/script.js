@@ -1,6 +1,6 @@
 let carta1 = {
     nome: 'Katarina',
-    foto: 'https://static.wikia.nocookie.net/leagueoflegends/images/1/1e/Katarina_Render.png',
+    foto: 'https://i.imgur.com/cj9WPpm.jpg',
     atributos:{
         ataque: 60,
         defesa: 30,
@@ -9,7 +9,7 @@ let carta1 = {
 }
 let carta2 = {
     nome: 'Lux',
-    foto: 'https://static.wikia.nocookie.net/leagueoflegends/images/f/f4/Lux_Render.png',
+    foto: 'https://i.imgur.com/d5hmBCd.jpg',
     atributos:{
         ataque: 40,
         defesa: 45,
@@ -18,7 +18,7 @@ let carta2 = {
 }
 let carta3 = {
     nome: 'Caitlyn',
-    foto: 'https://static.wikia.nocookie.net/leagueoflegends/images/e/ee/Caitlyn_Render.png',
+    foto: 'https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2021/03/04/51022-700x413.jpg',
     atributos:{
         ataque: 90,
         defesa: 25,
@@ -27,7 +27,7 @@ let carta3 = {
 }
 let carta4 = {
     nome: "Cho'Gath",
-    foto: "https://static.wikia.nocookie.net/leagueoflegends/images/2/25/Cho'Gath_Render.png",
+    foto: "https://i.imgur.com/018AGPn.jpg",
     atributos:{
         ataque: 30,
         defesa: 70,
@@ -36,7 +36,7 @@ let carta4 = {
 }
 let carta5 = {
     nome: 'Nasus',
-    foto: 'https://static.wikia.nocookie.net/leagueoflegends/images/b/bf/Nasus_Render.png',
+    foto: 'https://i.imgur.com/A1ndkwi.jpg',
     atributos:{
         ataque: 70,
         defesa: 75,
@@ -45,7 +45,7 @@ let carta5 = {
 }
 let carta6 = {
     nome: 'Shen',
-    foto: 'https://static.wikia.nocookie.net/leagueoflegends/images/a/ac/Shen_Render.png',
+    foto: 'https://i.imgur.com/UqTL4jF.jpg',
     atributos:{
         ataque: 40,
         defesa: 85,
@@ -53,7 +53,47 @@ let carta6 = {
     } 
 }
 
-let baralho = [carta1, carta2, carta3, carta4, carta5, carta6]
+let carta7 = {
+    nome: 'Elise',
+    foto: 'https://i.imgur.com/t360nLi.jpg',
+    atributos:{
+        ataque: 20,
+        defesa: 45,
+        magia: 75
+    } 
+}
+
+let carta8 = {
+    nome: 'Ahri',
+    foto: 'https://i.imgur.com/08qYdgb.jpg',
+    atributos:{
+        ataque: 30,
+        defesa: 35,
+        magia: 80
+    } 
+}
+
+let carta9 = {
+    nome: 'Rammus',
+    foto: 'https://i.imgur.com/cnRyvcO.jpg',
+    atributos:{
+        ataque: 30,
+        defesa: 95,
+        magia: 35
+    } 
+}
+
+let carta10 = {
+    nome: 'Riven',
+    foto: 'https://i.imgur.com/RggK2e3.jpg',
+    atributos:{
+        ataque: 90,
+        defesa: 55,
+        magia: 15
+    } 
+}
+
+let baralho = [carta1, carta2, carta3, carta4, carta5, carta6, carta7, carta8, carta9, carta10]
 
 let cartaMaquina
 let cartaJogador
@@ -70,16 +110,16 @@ pontos.innerHTML = `Jogador - ${ptsJogador} | ${ptsMaquina} - Máquina `
 minhaCarta.style.display = 'none'
 
 function sortearCarta(){
-    numeroCartaMaquina = Math.floor(Math.random() * 6)
-    numeroCartaJogador = Math.floor(Math.random() * 6)
+    numeroCartaMaquina = Math.floor(Math.random() * 10)
+    numeroCartaJogador = Math.floor(Math.random() * 10)
 
-    if(numeroCartaMaquina > 6 && numeroCartaJogador > 6){
-        numeroCartaMaquina = 5
+    if(numeroCartaMaquina > 10 && numeroCartaJogador > 10){
+        numeroCartaMaquina = 9
     }
     cartaMaquina = baralho[numeroCartaMaquina]
    
     while (numeroCartaMaquina == numeroCartaJogador) {
-        numeroCartaJogador = Math.floor(Math.random() * 6)
+        numeroCartaJogador = Math.floor(Math.random() * 10)
     }
 
     cartaJogador = baralho[numeroCartaJogador]
@@ -89,13 +129,16 @@ function sortearCarta(){
     document.getElementById('escolhaAtributo').style.display="block"
 
     minhaCarta.style.display = 'block'
-    minhaCarta.innerHTML = `<div class='info-carta'>
-                            <img class="img-carta" src="${cartaJogador.foto}" alt=""><br>
-                            Nome: ${cartaJogador.nome}<br>
-                            Ataque: ${cartaJogador.atributos.ataque}<br>
-                            Defesa: ${cartaJogador.atributos.defesa}<br>
-                            Magia: ${cartaJogador.atributos.magia}
-                                </div>`
+
+    minhaCarta.innerHTML = `
+    <div class='carta'>
+    <div class="nomeCarta">${cartaJogador.nome}</div>
+    <img class="imgCarta" src="${cartaJogador.foto}" alt="">             
+    <div class="atributosCarta">
+    <div class="bg1"><span>Ataque</span><span>${cartaJogador.atributos.ataque}</span></div>
+    <div class="bg2"><span>Defesa</span><span>${cartaJogador.atributos.defesa}</span></div>
+    <div class="bg1"><span>Magia</span><span>${cartaJogador.atributos.magia}</span></div>
+    </div></div>`                           
 
      exibirOpcoes()
      
@@ -125,22 +168,26 @@ let resultado = document.querySelector('#resultado')
 function jogar(){
     let atributoSelecionado =  obtemAtributoSelecionado()
     minhaCarta.innerHTML = ''
-    campoJogador.innerHTML = `                       
-    <img class="img-carta" src="${cartaJogador.foto}" alt=""><br>
-    Nome: ${cartaJogador.nome}<br>
-    Ataque: ${cartaJogador.atributos.ataque}<br>
-    Defesa: ${cartaJogador.atributos.defesa}<br>
-    Magia: ${cartaJogador.atributos.magia}
-    `
+    campoJogador.innerHTML = `
+    <div class='carta'>
+    <div class="nomeCarta">${cartaJogador.nome}</div>
+    <img class="imgCarta" src="${cartaJogador.foto}" alt="">             
+    <div class="atributosCarta">
+    <div class="bg1"><span>Ataque</span><span>${cartaJogador.atributos.ataque}</span></div>
+    <div class="bg2"><span>Defesa</span><span>${cartaJogador.atributos.defesa}</span></div>
+    <div class="bg1"><span>Magia</span><span>${cartaJogador.atributos.magia}</span></div>
+    </div></div>`
     versus.innerHTML = `<img class="img-x" src="https://i.imgur.com/zRf2J4T.png" alt="">`
 
-    campoMaquina.innerHTML = `                       
-    <img class="img-carta" src="${cartaMaquina.foto}" alt=""><br>
-    Nome: ${cartaMaquina.nome}<br>
-    Ataque: ${cartaMaquina.atributos.ataque}<br>
-    Defesa: ${cartaMaquina.atributos.defesa}<br>
-    Magia: ${cartaMaquina.atributos.magia}
-    `
+    campoMaquina.innerHTML = `
+    <div class='carta'>
+    <div class="nomeCarta">${cartaMaquina.nome}</div>
+    <img class="imgCarta" src="${cartaMaquina.foto}" alt="">             
+    <div class="atributosCarta">
+    <div class="bg1"><span>Ataque</span><span>${cartaMaquina.atributos.ataque}</span></div>
+    <div class="bg2"><span>Defesa</span><span>${cartaMaquina.atributos.defesa}</span></div>
+    <div class="bg1"><span>Magia</span><span>${cartaMaquina.atributos.magia}</span></div>
+    </div></div>`
     
     if(cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado]){
         console.log(`Jogador: ${cartaJogador.atributos[atributoSelecionado]}`)
