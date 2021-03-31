@@ -4,7 +4,7 @@ let carta1 = {
     atributos:{
         ataque: 60,
         defesa: 30,
-        magia: 80
+        magia: 70
     }    
 }
 let carta2 = {
@@ -12,15 +12,15 @@ let carta2 = {
     foto: 'https://i.imgur.com/d5hmBCd.jpg',
     atributos:{
         ataque: 40,
-        defesa: 45,
-        magia: 85
+        defesa: 50,
+        magia: 75
     } 
 }
 let carta3 = {
     nome: 'Caitlyn',
     foto: 'https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2021/03/04/51022-700x413.jpg',
     atributos:{
-        ataque: 90,
+        ataque: 80,
         defesa: 25,
         magia: 30
     } 
@@ -47,8 +47,8 @@ let carta6 = {
     nome: 'Shen',
     foto: 'https://i.imgur.com/UqTL4jF.jpg',
     atributos:{
-        ataque: 40,
-        defesa: 85,
+        ataque: 45,
+        defesa: 80,
         magia: 35
     } 
 }
@@ -57,9 +57,9 @@ let carta7 = {
     nome: 'Elise',
     foto: 'https://i.imgur.com/t360nLi.jpg',
     atributos:{
-        ataque: 20,
-        defesa: 45,
-        magia: 75
+        ataque: 35,
+        defesa: 50,
+        magia: 70
     } 
 }
 
@@ -68,8 +68,8 @@ let carta8 = {
     foto: 'https://i.imgur.com/08qYdgb.jpg',
     atributos:{
         ataque: 30,
-        defesa: 35,
-        magia: 80
+        defesa: 40,
+        magia: 75
     } 
 }
 
@@ -77,9 +77,9 @@ let carta9 = {
     nome: 'Rammus',
     foto: 'https://i.imgur.com/cnRyvcO.jpg',
     atributos:{
-        ataque: 30,
-        defesa: 95,
-        magia: 35
+        ataque: 35,
+        defesa: 80,
+        magia: 45
     } 
 }
 
@@ -177,6 +177,7 @@ function jogar(){
     <div class="bg2"><span>Defesa</span><span>${cartaJogador.atributos.defesa}</span></div>
     <div class="bg1"><span>Magia</span><span>${cartaJogador.atributos.magia}</span></div>
     </div></div>`
+    
     versus.innerHTML = `<img class="img-x" src="https://i.imgur.com/zRf2J4T.png" alt="">`
 
     campoMaquina.innerHTML = `
