@@ -286,6 +286,7 @@ function reiniciarJogo(){
     distribuiCartas()
     pontos.innerHTML = `Jogador possui ${meuBaralho.length} cartas | Máquina possui ${baralho.length} cartas`
     resultado.innerHTML = ''
+    document.getElementById('btnNovoJogo').disabled = true 
     mostraButton()
 
 }
