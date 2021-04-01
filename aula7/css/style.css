@@ -207,3 +207,7 @@ button{
 #opcoes input{
   margin: 5px;
 }
+
+#reiniciarJogo{
+  display: none;
+}
