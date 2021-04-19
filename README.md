@@ -19,5 +19,3 @@ Tabela onde é possível adicionar e remover jogadores, os elementos são ordena
 
 * Projeto 6 - Super Trunfo - League of Legends  
 Jogo Super Trunfo baseado no League of Legends. Cada jogador possui 7 cartas no início. O ganhador da rodada recebe a carta do adversário e o primeiro a ficar com zero perde.  
-
-* aula 10 - Em breve
